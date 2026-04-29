@@ -19,12 +19,12 @@ EduBridge is an educational management system that enables educators to create a
 ## Tech Stack
 
 ### Frontend
-- **JavaScript** (55.4%) - Core frontend logic
-- **HTML** (15.4%) - Markup and structure
-- **CSS** (12.1%) - Styling and responsive design
+- **JavaScript** - Core frontend logic
+- **HTML**  - Markup and structure
+- **CSS**  - Styling and responsive design
 
 ### Backend
-- **Python** (17.1%) - Server-side logic
+- **Python**- Server-side logic
 - **FastAPI** - Modern, fast web framework for building APIs
 - **PyMongo** - MongoDB driver for database operations
 - **GridFS** - MongoDB file storage for lesson materials and videos

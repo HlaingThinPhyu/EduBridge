@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>EduBridge - Dashboard</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="/static/style.css">
+  <link rel="manifest" href="/static/manifest.json">
+</head>
+<body data-page="dashboard">
+  <header class="top-bar">
+    <div class="app-title">EduBridge</div>
+    <nav class="nav-links">
+      <a href="/static/index.html">Lessons</a>
+      <a href="/static/dashboard.html" class="active">Dashboard</a>
+    </nav>
+    <span id="currentUserLabel" class="user-label"></span>
+    <button id="logoutBtn" class="link-button">Logout</button>
+    <div class="status-indicator" id="networkStatus">Checking...</div>
+  </header>
+
+  <main class="main-content">
+    <section class="hero">
+      <h1>Learning Dashboard</h1>
+      <p>See which lessons you have completed and what is still remaining.</p>
+    </section>
+
+    <section>
+      <h2>Your Progress</h2>
+      <p id="dashboardSummary" class="info-text">Loading...</p>
+    </section>
+
+    <section class="split-section">
+      <div class="split-column">
+        <h2>Completed Lessons</h2>
+        <div id="completedLessons" class="card-grid"></div>
+      </div>
+      <div class="split-column">
+        <h2>Not Completed Lessons</h2>
+        <div id="pendingLessons" class="card-grid"></div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Overall Lesson Stats</h2>
+      <table class="stats-table">
+        <thead>
+          <tr>
+            <th>Lesson</th>
+            <th>Completions</th>
+          </tr>
+        </thead>
+        <tbody id="statsTableBody"></tbody>
+      </table>
+      <p id="statsMessage" class="info-text"></p>
+    </section>
+  </main>
+
+  <script src="/static/app.js" defer></script>
+</body>
+</html>

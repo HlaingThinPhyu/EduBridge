@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>EduBridge - Lesson</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="/static/style.css">
+  <link rel="manifest" href="/static/manifest.json">
+</head>
+<body data-page="lesson">
+  <header class="top-bar">
+    <div class="app-title">EduBridge</div>
+    <nav class="nav-links">
+      <a href="/">Lessons</a>
+      <a href="/static/dashboard.html">Dashboard</a>
+    </nav>
+    <span id="currentUserLabel" class="user-label"></span>
+    <button id="logoutBtn" class="link-button">Logout</button>
+    <div class="status-indicator" id="networkStatus">Checking...</div>
+  </header>
+
+  <main class="main-content">
+    <article class="lesson-container">
+      <h1 id="lessonTitle">Loading...</h1>
+      <p id="lessonMeta" class="lesson-meta"></p>
+      <p id="lessonDescription" class="lesson-description"></p>
+      <div id="lessonContent" class="lesson-content"></div>
+      
+
+      <hr style="margin: 1.4rem 0; border: none; border-top: 1px solid #e5e7eb;">
+
+      <!-- ADMIN ONLY SECTION -->
+      <section id="adminLessonTools">
+        <h2>Edit Lesson Content (temporary admin)</h2>
+        <textarea id="editLessonContent" rows="6"></textarea>
+        <button
+          id="saveLessonBtn"
+          class="primary-btn"
+          style="margin-top: 0.6rem;"
+        >
+          Save Content
+        </button>
+        <p id="saveLessonMessage" class="info-text"></p>
+
+        <hr style="margin:1.2rem 0;">
+
+        <h2>Lesson Materials (Edit & Upload)</h2>
+
+        <input type="file" id="materialInput" class="file-input">
+
+        <button id="uploadMaterialBtn" class="primary-btn">
+          Upload Material
+        </button>
+
+        <p id="uploadMaterialMessage" class="info-text"></p>
+
+      </section>
+
+      <!-- Admin+ STUDENT VIEW -->
+      <section id="lessonMaterials">
+        <h2>Lesson Materials</h2>
+        <div id="materialsList" class="card-grid"></div>
+      </section>
+      <!-- <div id="videoSection">
+        <h3>Lesson Video</h3>
+        <video id="lessonVideo" width="100%" controls style="display:none;"></video>
+        <iframe id="lessonVideoUrl" width="100%" height="360" style="display:none;" allowfullscreen></iframe>
+      </div> -->
+      <section id="lessonVideoSection" style="margin-top: 1.5rem; display:none;">
+        <h2>Lesson Video</h2>
+        <video id="lessonVideoPlayer" controls width="100%"></video>
+      </section>
+
+      <div id="adminVideoUpload">
+        <h3>Upload Lesson Video (Admin)</h3>
+        <input type="file" id="videoInput" accept="video/*">
+        <button id="uploadVideoBtn" class="primary-btn">Upload Video</button>
+        <p id="uploadVideoMsg"></p>
+      </div>
+
+      <div style="margin-top: 0.9rem;">
+        <button id="completeLessonBtn" class="primary-btn">
+          Mark as Completed
+        </button>
+        <p id="lessonStatusMessage" class="info-text"></p>
+      </div>
+
+    </article>
+  </main>
+
+  <script src="/static/app.js" defer></script>
+</body>
+</html>

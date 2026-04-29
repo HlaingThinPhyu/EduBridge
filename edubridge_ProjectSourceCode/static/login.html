@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>EduBridge - Login</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="/static/style.css">
+  <link rel="manifest" href="/static/manifest.json">
+</head>
+<body data-page="login">
+  <header class="top-bar">
+    <div class="app-title">EduBridge</div>
+    <nav class="nav-links">
+      <span class="active">Login</span>
+    </nav>
+    <div class="status-indicator" id="networkStatus">Checking...</div>
+  </header>
+
+  <main class="main-content">
+    <section class="hero">
+      <h1>Welcome</h1>
+    </section>
+
+    <section class="login-wrapper">
+      <form id="loginForm" class="card">
+  <label>
+    Username
+    <input type="text" id="loginUsername" required>
+  </label>
+  <label>
+    Password
+    <input type="password" id="loginPassword" required>
+  </label>
+  <label>
+    Role
+    <select id="loginRole">
+      <option value="student" selected>Student</option>
+      <option value="admin">Admin</option>
+    </select>
+  </label>
+
+  <div class="form-row" style="margin-top: 0.6rem;">
+    <button type="button" id="registerBtn" class="primary-btn">
+      Register
+    </button>
+    <button type="button" id="loginBtn" class="primary-btn">
+      Login
+    </button>
+  </div>
+
+  <p id="loginMessage" class="info-text"></p>
+</form>
+    </section>
+  </main>
+
+  <script src="/static/app.js" defer></script>
+</body>
+</html>

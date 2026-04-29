@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>EduBridge - Lessons</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="/static/style.css">
+  <link rel="manifest" href="/static/manifest.json">
+</head>
+<body data-page="index">
+  <header class="top-bar">
+    <div class="app-title">EduBridge</div>
+    <nav class="nav-links">
+      <a href="/" class="active">Lessons</a>
+      <a href="/static/dashboard.html">Dashboard</a>
+    </nav>
+    <span id="currentUserLabel" class="user-label"></span>
+    <button id="logoutBtn" class="link-button">Logout</button>
+    <div class="status-indicator" id="networkStatus">Checking...</div>
+  </header>
+
+  <main class="main-content">
+    <section class="hero">
+      <h1>Early Learning, Anywhere</h1>
+      <p>
+        Create and deliver bite-sized lessons that work even when the network
+        doesn’t. EduBridge is built for low-connectivity environments.
+      </p>
+    </section>
+
+    <section id="createLessonSection">
+      <h2>Create New Lesson</h2>
+      
+      <form id="createLessonForm" class="card">
+            <label>
+              Title
+              <input type="text" id="lessonTitleInput" required>
+            </label>
+
+            <div class="form-row">
+              <label>
+                Language
+                <select id="lessonLanguageInput">
+                  <option value="en">English</option>
+                  <option value="zh">Chinese</option>
+                </select>
+              </label>
+              <label>
+                Level
+                <select id="lessonLevelInput">
+                  <option value="beginner">Beginner</option>
+                  <option value="intermediate">Intermediate</option>
+                </select>
+              </label>
+            </div>
+
+            <label>
+              Short Description
+              <input type="text" id="lessonDescriptionInput">
+            </label>
+
+            <label>
+              Content
+              <textarea id="lessonContentInput" rows="4"></textarea>
+            </label>
+            <div class="form-group">
+              <label for="createLessonMaterial">Lesson Materials (optional)</label>
+              <input type="file" id="createLessonMaterial" multiple>
+            </div>
+            <div class="form-group">
+              <label for="createLessonVideo">Lesson Video (optional)</label>
+              <input type="file" id="createLessonVideo" accept="video/*">
+            </div>
+            <button type="submit" class="primary-btn">Create Lesson</button>
+            <p id="createLessonMessage" class="info-text"></p>
+      </form>
+    </section>
+
+    <section>
+      <h2>Available Lessons</h2>
+      <div id="lessonsList" class="card-grid"></div>
+      <p id="lessonsMessage" class="info-text"></p>
+    </section>
+  </main>
+
+  <script src="/static/app.js" defer></script>
+</body>
+</html>
